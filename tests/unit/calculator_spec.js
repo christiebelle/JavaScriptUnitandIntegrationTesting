@@ -73,4 +73,30 @@ describe('calculator', function () {
     assert.equal(170744500, calculator.runningTotal);
   })
 
+  it('can divide small nums', function(){
+    calculator.clearClick();
+    calculator.numberClick(2);
+    calculator.numberClick(0);
+    calculator.operatorClick("/");
+    calculator.numberClick(2);
+    calculator.operatorClick("=");
+    assert.equal(10, calculator.runningTotal);
+  })
+
+  // it('can divide large nums', function(){
+  //   calculator.clearClick();
+  //   calculator.numberClick(2);
+  //   calculator.numberClick(0);
+  //   calculator.numberClick(5);
+  //   calculator.numberClick(0);
+  //   calculator.numberClick(0);
+  //   calculator.operatorClick("*");
+  //   calculator.numberClick(8);
+  //   calculator.numberClick(3);
+  //   calculator.numberClick(2);
+  //   calculator.numberClick(9);
+  //   calculator.operatorClick("=");
+  //   assert.equal(170744500, calculator.runningTotal);
+  // })
+
 });
