@@ -141,4 +141,22 @@ describe('calculator', function () {
     assert.equal(9, calculator.runningTotal);
   })
 
+  it('has a clear click', function(){
+    calculator.clearClick();
+    calculator.numberClick(2);
+    calculator.numberClick(0);
+    calculator.operatorClick("*");
+    calculator.numberClick(2);
+    calculator.operatorClick("-");
+    calculator.numberClick(5);
+    calculator.operatorClick("+");
+    calculator.numberClick(1);
+    calculator.operatorClick("=");
+    calculator.operatorClick("/");
+    calculator.numberClick(4);
+    calculator.operatorClick("=");
+    calculator.clearClick();
+    assert.equal(0, calculator.runningTotal);
+  })
+
 });
