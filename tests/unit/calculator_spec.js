@@ -21,7 +21,7 @@ describe('calculator', function () {
     assert.equal(25, calculator.runningTotal);
   })
 
-  it('can subtract', function(){
+  it('can subtract small nums', function(){
     calculator.clearClick();
     calculator.numberClick(2);
     calculator.numberClick(0);
@@ -29,6 +29,22 @@ describe('calculator', function () {
     calculator.numberClick(8);
     calculator.operatorClick("=");
     assert.equal(12, calculator.runningTotal);
+  })
+
+  it('can subtract large nums', function(){
+    calculator.clearClick();
+    calculator.numberClick(2);
+    calculator.numberClick(0);
+    calculator.numberClick(5);
+    calculator.numberClick(0);
+    calculator.numberClick(0);
+    calculator.operatorClick("-");
+    calculator.numberClick(8);
+    calculator.numberClick(3);
+    calculator.numberClick(2);
+    calculator.numberClick(9);
+    calculator.operatorClick("=");
+    assert.equal(12171, calculator.runningTotal);
   })
 
 });
