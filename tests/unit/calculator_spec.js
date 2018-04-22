@@ -11,7 +11,7 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
-  it('can add', function(){
+  it('can add small nums', function(){
     calculator.clearClick();
     calculator.numberClick(2);
     calculator.numberClick(0);
