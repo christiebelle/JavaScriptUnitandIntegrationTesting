@@ -171,4 +171,13 @@ describe('calculator functionality', function() {
       expect(running_total.getAttribute('value')).to.eventually.equal('2.6666666666666665');
     })
 
+    it('should be able to divide by zero', function(){
+      running_total = element(by.css('#running_total'))
+      element(by.css('#number8')).click();
+      element(by.css('#operator_divide')).click();
+      element(by.css('#number0')).click();
+      element(by.css('#operator_divide')).click();
+      expect(running_total.getAttribute('value')).to.eventually.equal('8');
+    })
+
 });
