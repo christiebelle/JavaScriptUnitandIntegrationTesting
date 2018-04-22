@@ -115,4 +115,14 @@ describe('calculator', function () {
     assert.equal(30, calculator.runningTotal);
   })
 
+
+    it('has a number click', function(){
+      calculator.clearClick();
+      calculator.numberClick(2);
+      calculator.numberClick(0);
+      calculator.numberClick(2);
+      calculator.operatorClick("=");
+      assert.equal(202, calculator.runningTotal);
+    })
+
 });
